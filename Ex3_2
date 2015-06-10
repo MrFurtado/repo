@@ -1,0 +1,23 @@
+# ============================
+# Coursera practicing script
+# Python for Informatic Book
+# CHAPTER 3
+# ============================
+# EX3.2
+
+
+prompt_hours = raw_input("Enter Hours: ")
+try:
+    hours = float(prompt_hours)
+    prompt_rate = raw_input("Enter Rate: ")
+    rate = float(prompt_rate)
+    pay = hours * rate
+
+    if hours <= 40:
+        print 'Pay: %d' % pay
+    else:
+        overtime = hours - 40
+        ot_rate = rate * 40 + (1.5 * rate) * overtime
+        print "Pay: %d" % ot_rate
+except:
+    print "Please type a number"
